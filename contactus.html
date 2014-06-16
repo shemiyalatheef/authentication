@@ -2,6 +2,25 @@
 <head>
 	<title>Authentication|Contact Us</title>
 <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<script type="text/javascript">
+	function submit_action()
+	{
+		var name =document.getElementById("nametxt").value;
+		var email = document.getElementById("emailtxt").value;
+		var msg = document.getElementById("msgtxt").value;
+		if(name==""||email==""||msg=="")
+			{alert("Blank fields");}
+		else 
+		{	
+			alert("Submitted");
+			document.getElementById("msgtxt").value="";
+			document.getElementById("emailtxt").value="";
+			document.getElementById("nametxt").value="";
+
+		}
+		
+	}
+	</script>
 </head>
 <body>
 	<div class="main">
@@ -21,24 +40,24 @@
 						Name
 					</div>
 					<div class="signup_right">
-						<input type="text" required>
+						<input type="text" id="nametxt">
 					</div>
 					
 					<div class="signup_left" >
 						Email Adress
 					</div>
 					<div class="signup_right">
-						<input type="email" required>
+						<input type="email" id="emailtxt">
 					</div>
 
 					<div class="signup_left" >
 						Your Message
 					</div>
 					<div class="signup_right" style="height:15px">
-						<textarea></textarea>
+						<textarea id="msgtxt"></textarea>
 					</div>
-					<div class="signup_submit" >
-						<div><input type="submit" value="Submit"></div>
+					<div class="signup_submit" style="margin-top:20px;">
+						<div><input type="button" value="Submit" onclick="submit_action()"></div>
 					</div>
 					</form>
 			</div>

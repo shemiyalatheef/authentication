@@ -2,6 +2,22 @@
 <head>
 	<title>Authentication|edit</title>
 	<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+	<script type="text/javascript">
+	function submit_action()
+	{
+		var nametxt =document.getElementById("nametxt").value;
+		var agetxt = document.getElementById("agetxt").value;
+		var emailtxt = document.getElementById("emailtxt").value;
+		var phtxt =document.getElementById("phtxt").value;
+		
+		if(nametxt==""||agetxt==""||emailtxt==""||phtxt=="")
+			{alert("Blank fields");}
+		else 
+		{		location.assign("success.html")	}
+		
+		
+	}
+	</script>
 </head>
 <body>
 	<div class="main">
@@ -13,7 +29,7 @@
 			
 			</div>
 			<div class="content_right">
-			<form action="success.html">
+			
 					
 				<div class="signin">
 						<h2> Your Profile</h2>
@@ -22,33 +38,28 @@
 						Name
 					</div>
 					<div class="signup_right">
-						<input type="text" required>
+						<input type="text" id="nametxt">
 					</div>
 					<div class="signup_left" >
 						Age
 					</div>
 					<div class="signup_right">
-						<input type="number" required>
+						<input type="number" id="agetxt">
 					</div>
 					<div class="signup_left" >
 						Email Adress
 					</div>
 					<div class="signup_right">
-						<input type="email" required>
+						<input type="email" id="emailtxt">
 					</div>
 
-					<div class="signup_left" >
-						Password
-					</div>
-					<div class="signup_right">
-						<input type="password" required>
-					</div>
-
+				
+					
 					<div class="signup_left" >
 						Phone Number
 					</div>
 					<div class="signup_right">
-						<input type="number" required>
+						<input type="number" id="phtxt">
 					</div>
 
 					<div class="signup_left" >
@@ -86,9 +97,9 @@
 						<input type="checkbox"  id="PG">
 					</div>
 					<div class="signup_submit" >
-						<div><input type="submit" value="Update Profile"></div>
+						<div><input type="submit" value="Update Profile" onclick="submit_action()"></div>
 					</div>
-				</form>
+				
 
 
 			</div>

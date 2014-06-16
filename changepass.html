@@ -2,6 +2,21 @@
 <head>
 	<title>Authentication|cahngepassword</title>
 	<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+	<script type="text/javascript">
+	function submit_action()
+	{
+		var curr_pass =document.getElementById("current_pass").value;
+		var pass1 = document.getElementById("pass1").value;
+		var pass2 = document.getElementById("pass2").value;
+		if(pass1==""||pass2==""||curr_pass=="")
+			{alert("Blank fields");}
+		else if(pass1==pass2)
+		{		location.assign("success.html")	}
+		else
+			{alert("Check Password");}
+		
+	}
+	</script>
 </head>
 <body>
 	<div class="main">
@@ -13,32 +28,32 @@
 			
 			</div>
 			<div class="content_right">
-				<form action="success.html">	
+				
 				<div class="signin">
 						<h2> Change Password</h2>
 					</div>	
 					<div class="signup_left">
 						Current Password
 					</div>
-					<div class="signup_right">
-						<input type="password" required>
+					<div class="signup_right" >
+						<input type="password" id="current_pass" >
 					</div>
 					<div class="signup_left" >
 						New Password
 					</div>
 					<div class="signup_right">
-						<input type="password" required>
+						<input type="password"  id="pass1">
 					</div>
 					<div class="signup_left" >
 						Retype New Password
 					</div>
 					<div class="signup_right">
-						<input type="password" required>
+						<input type="password"  id="pass2">
 					</div>
 					<div class="signup_submit" >
-						<div><input type="submit" value="submit"></div>
+						<div><input type="button" value="submit" onclick="submit_action()"></div>
 					</div>
-					</form>
+					
 			</div>
 		</div>
 		<div class="header" >
@@ -66,6 +81,7 @@
 		</div>
 
 	</div>
+	
 
 </body>
 </html>
