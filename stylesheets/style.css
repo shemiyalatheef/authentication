@@ -131,3 +131,30 @@ h1
 	background-image:url("../images/img_4819.jpg");
 
 }
+.feedback
+{
+	width:60%;
+	height: 10%;
+	
+	margin-left: 20%;
+	background-color: green;
+	border-radius: 40px 40px 40px 40px;
+
+	text-align: center;
+	line-height: 40px;
+}
+.feeback_slider
+{
+	width:27%;
+	height: 30%;
+	
+	margin-left: 9%;
+	background-color: #7339BF;
+	border-radius: 40px 40px 40px 40px;
+	position: absolute;
+	text-align: center;
+	line-height: 40px;
+	display: none;
+
+
+}
