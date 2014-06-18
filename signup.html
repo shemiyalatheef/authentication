@@ -1,91 +1,63 @@
 <html>
 <head>
 	<title>Authentication|SignUp</title>
-	<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
-	<script type="text/javascript">
-	function submit_action()
-	{
-
-		var nametxt =document.getElementById("nametxt").value;
-		
-		var agetxt = document.getElementById("agetxt").value;
-		var emailtxt = document.getElementById("emailtxt").value;
-		var phtxt =document.getElementById("phtxt").value;
-		var pass1txt = document.getElementById("pass1txt").value;
-		var pass2txt = document.getElementById("pass2txt").value;
-		if(nametxt==""||agetxt==""||phtxt==""||pass1txt==""||pass2txt=="")
-			{alert("Blank fields");}
-		else if(pass1txt!=pass2txt)
-		{		alert("Check Password");	}
-		else 
-		{		location.assign("gss_index.html");	}
-		
-		
-	}
+	<link type="text/css" rel="stylesheet" href="stylesheets/signup.css">
+	<script type="text/javascript" src="javascripts/submit_action.js">
 	</script>
 </head>
 <body>
+
 	<div class="main">
 		<div class="header">
-			<center><h1>GLOBAL SCIENTIFIC SOLUTIONS</h1></center>
+			GLOBAL SCIENTIFIC SOLUTIONS
 		</div>
 		<div class="content">
-			<div class="content_left">
 			
-			</div>
-			<div class="content_right">
 			
+			
+			<form method="POST" action="gss_index.html">
 				<div class="signin">
-						<h2> Sign Up</h2>
+						<h4>Sign Up</h4>
 					</div>	
-					<div class="signup_left">
-						Name
-					</div>
+					
 					<div class="signup_right">
-						<input type="text" id="nametxt">
+						<input type="text" id="fnametxt" placeholder="First Name">
 					</div>
-					<div class="signup_left" >
-						Age
-					</div>
+					
 					<div class="signup_right">
-						<input type="number" id="agetxt">
+						<input type="text" id="lnametxt" placeholder="Last Name">
 					</div>
-					<div class="signup_left" >
-						Email Adress
-					</div>
+					
 					<div class="signup_right">
-						<input type="email" id="emailtxt">
+						<input type="text" id="emailtxt" placeholder="Email">
 					</div>
 
-					<div class="signup_left" >
-						Password
-					</div>
+					
 					<div class="signup_right">
-						<input type="password" id="pass1txt">
+						<input type="password" id="pass1txt" placeholder="New Password">
 					</div>
-					<div class="signup_left" >
-						Confirm Password
-					</div>
+					
 					<div class="signup_right">
-						<input type="password" id="pass2txt">
+						<input type="password" id="pass2txt" placeholder="Confirm password">
 					</div>
 
-					<div class="signup_left" >
-						Phone Number
-					</div>
+					
 					<div class="signup_right">
-						<input type="number" id="phtxt">
+						<input type="Text" id="phtxt" placeholder="Phone Number" onkeypress="return phone_validation()" >
 					</div>
 
-					<div class="signup_left" >
-						Select State
-					</div>
+					
 					<div class="signup_right">
-						<select>
-							<option value=1>Kerala</option>
-							<option value=1>Tamil Nadu</option>
-							<option value=1>Karnataka</option>
-							
+						<input type="Text" id="pincodetxt" placeholder="Pincode">
+					</div>
+
+					
+					<div class="signup_right">
+						<select id="statetxt">
+							<option value=1 >Select State</option>
+							<option value=2>Kerala</option>
+							<option value=3>Tamil Nadu</option>
+							<option value=4>Karnataka</option>
 						</select>
 					</div>
 
@@ -100,35 +72,39 @@
 					</div>
 
 					<div class="signup_left" >
-						Qualification
+						Language
 					</div>
 					<div class="signup_right">
-						<label for="SSLC">SSLC</label>
+						<label for="SSLC">Malayalam</label>
 						<input type="checkbox"  id="SSLC">
 						
-						<label for="Deree">Deree</label>
+						<label for="Deree">English</label>
 						<input type="checkbox"  id="Deree">
-						<label for="PG">PG</label>
+						<label for="PG">Hindi</label>
 						<input type="checkbox"  id="PG">
+						
 					</div>
-					<div class="signup_submit" >
-						<div><input type="button" value="submit" onclick="submit_action()"></div>
+					<div class="signup_right">
+					<div><input type="submit" value="submit" onclick="return submit_action()"></div>
 					</div>
 					
-
-			</div>
-		</div>
-		<div class="header" >
-			<div class="menu" >
-				<div class="menu_item" >
+			
+			
+			
+		
+					<div class="menu">
+					<div class="menu_item">
 					<a href="gss_index.html">Home</a> 
-				</div>
-				<div class="menu_item" >
+					</div>
+					<div class="menu_item">
 					<a href="signin.html">Sign In</a> 
+					</div>
+					
 				</div>
-								
-			</div>
+			</form>					
 		</div>
+	
+		
 
 	</div>
 

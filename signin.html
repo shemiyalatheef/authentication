@@ -7,10 +7,13 @@
 	{
 		var unametxt =document.getElementById("unametxt").value;
 		var passtxt = document.getElementById("passtxt").value;
-		
-		if(unametxt==""||passtxt=="")
-			{alert("Blank fields");}
-		else 
+		if(unametxt==""&&passtxt=="")
+			{alert("Insert valid username and password");}
+		else if(unametxt=="")
+			{alert("Invalid username");}
+		else if(passtxt=="")
+			{alert("Invalid password");}
+		else
 		{		location.assign("home.html")	}
 		
 		

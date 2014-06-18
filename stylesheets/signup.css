@@ -1,7 +1,7 @@
 .main
 {
 	width:auto;
-	height:100%;
+	height:auto;
 	background-color: #A7EBEF;
 	padding: 0px 0px 0px 0px;
 
@@ -27,20 +27,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', end
 }
 .menu
 {
-	width: 70%;
-	height:100%;
+	width: 100%;
+	height:10%;
 	
-	margin-left: 15%;
+
+	
 }
 .menu_item
 {
-	width:30%;
+	width:20%;
 	height:100%;
 	
 	text-align: center;
 	float:left;
 	line-height: 40px;
 	background-color:#05CCFD;
+	border :1px solid;
 }
 .menu_item:hover
 {
@@ -48,29 +50,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', end
 }
 .content
 {
-	height:75%;
+	
 	width:100%;
-	
+	padding-left: 8%;
+	border :1px solid;
 
-}
-.content_left
-{
-	height:100%;
-	width:40%;
-	
-	float:left;
-	background-image:url("../images/scan017.jpg");
-
-}
-.content_right
-{
-	height:100%;
-	width:55%;
-	
-	float:left;
-	padding-left: 20px;
-
-	
 }
 .signin
 {
@@ -80,87 +64,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', end
 	text-align: left;
 
 }
-.right_sub
-{
-	width:45%;
-	height:10%;
-	float:left;
-}
 .signup_left
 {
-	width:30%;
-	height: 7%;
-	float:left;
+	width:100%;
 	
-	margin-left:7%;
+	font-weight: bold;
 }
 .signup_right
 {
-	width:40%;
+	width:100%;
 	height: 7%;
-	float:left;
-	
-}
-.signup_submit
-{
-	width:40%;
-	height: 7%;
-	float:left;
-	
-	margin-left:40%;
-}
-.menu_item_home
-{
-	width:16.1%;
-	height:100%;
-	
-	text-align: center;
-	float:left;
-	line-height: 40px;
-	background-color:#05CCFD;
-}
-.menu_item_home:hover
-{
-	background-color:#ffff00;
-}
-h1
-{
-	text-shadow:5px 3px 5px #ff0000;
-}
-.content_left_account
-{
-	height:100%;
-	width:45%;
-	
-	float:left;
-	background-image:url("../images/img_4819.jpg");
-
-}
-.feedback
-{
-	width:60%;
-	height: 10%;
-	
-	margin-left: 20%;
-	background-color: green;
-	border-radius: 40px 40px 40px 40px;
-
-	text-align: center;
-	line-height: 40px;
-	cursor:pointer;
-}
-.feeback_slider
-{
-	width:27%;
-	height: 30%;
-	
-	margin-left: 9%;
-	background-color: #7339BF;
-	border-radius: 40px 40px 40px 40px;
-	position: absolute;
-	text-align: center;
-	line-height: 40px;
-	display: none;
-
-
 }
