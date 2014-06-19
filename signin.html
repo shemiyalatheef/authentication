@@ -1,69 +1,59 @@
 <html>
 <head>
 	<title>Authentication|SignIn</title>
-	<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
-	<script type="text/javascript">
-	function submit_action()
-	{
-		var unametxt =document.getElementById("unametxt").value;
-		var passtxt = document.getElementById("passtxt").value;
-		if(unametxt==""&&passtxt=="")
-			{alert("Insert valid username and password");}
-		else if(unametxt=="")
-			{alert("Invalid username");}
-		else if(passtxt=="")
-			{alert("Invalid password");}
-		else
-		{		location.assign("home.html")	}
-		
-		
-	}
+	<link type="text/css" rel="stylesheet" href="stylesheets/signup.css">
+	<script type="text/javascript" src="javascripts/submit_action.js" >
+	
 	</script>
 </head>
 <body>
-	<div class="main">
+	<div class="signin_main">
 		<div class="header">
-			<center><h1>GLOBAL SCIENTIFIC SOLUTIONS</h1></center>
+			GLOBAL SCIENTIFIC SOLUTIONS
 		</div>
-		<div class="content">
-			<div class="content_left">
-			
-			</div>
+		<div class="signin_content">
+			<form action="home.html" method="post">
 			<div class="content_right">
 					<div class="signin">
-						<h2> Sign in to your Account</h2>
+						<h4> Sign in to your Account</h4>
 					</div>
-					<div class="right_sub" style="margin-left:10%">
-						<h5> User Name</h5>
+					<div class="disp" id="disp"></div>
+					<div class="signup_right">
+						<input type="text" id="emailtxt" placeholder="Email Id" onclick="email_disp()">
 					</div>
-					<div class="right_sub" style="margin-left:10%">
-						<input type="email" id="unametxt">
+					<div class="disp" id="passdisp"></div>
+					<div class="signup_right">
+						<input type="text" id="passtxt" placeholder="Password" onclick="pass_disp()">
 					</div>
-					<div class="right_sub" style="margin-left:10%">
-						<h5> Password</h5>
+
+					<div class="signup_right">
+					<div>
+					<input type="submit" value="Sign In" onclick="return signin_submit_action()"
+					style="background-color: #9621DE;
+					width:25%; height:30px;
+					color:black">
+
+					<input type="button" value="Reset" onclick=" signin_reset_action()"
+					style="background-color: #9621DE;
+					width:25%; height:30px;
+					color:black">
 					</div>
-					<div class="right_sub" style="margin-left:10%">
-						<input type="password" id="passtxt">
-					</div>
-					<div class="right_sub" style="margin-left:10%">
-						<div><input type="submit" value="submit" onclick="submit_action()"></div>
 					</div>
 					
 					
-			</div>
-		</div>
-		<div class="header" style="background-color:#16C4C7">
-			<div class="menu" >
-				<div class="menu_item" >
+			<div class="menu">
+					<div class="menu_item">
 					<a href="gss_index.html">Home</a> 
-				</div>
-				
-				<div class="menu_item" >
+					</div>
+					<div class="menu_item">
 					<a href="signup.html">Sign Up</a> 
+					</div>
+					
 				</div>
-				
-			</div>
+			</form>					
 		</div>
+	
+		
 
 	</div>
 

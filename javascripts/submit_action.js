@@ -1,4 +1,5 @@
-function submit_action()
+/*Method for handling submit action in signup.html */
+function signup_submit_action()
 	{
 		
 		var fnametxt =document.getElementById("fnametxt").value;
@@ -94,17 +95,19 @@ function submit_action()
 
 		if(!gender1&&!gender2)
 		{
-			alert("select gender");
+			alert("Select Gender");
 			return false;
 		}
 		if(!sslc&&!degree&&!pg)
 		{
-			alert("select any Language");
+			alert("Select any Language");
 			return false;
 		}
 
 		
 }
+
+/*Method for Validating the phone number in signup.html */	
 function phone_validation()
 	{
 		var phtxt =document.getElementById("phtxt").value;
@@ -114,13 +117,81 @@ function phone_validation()
 			document.getElementById("phtxt").focus();
 
 		}
-	}	
+	}
+/*Method for Validating the pin number in signup.html */	
+	function pin_validation()
+	{
+		var pincodetxt =document.getElementById("pincodetxt").value;
+		if(isNaN(pincodetxt))
+		{alert("Enter valid number");
+			document.getElementById("pincodetxt").value="";
+			document.getElementById("pincodetxt").focus();
 
+		}
+	}
+
+/*Method for handling reset action in signup.html */	
+function signup_reset_action()
+{
+	document.getElementById("lnametxt").value="";
+	document.getElementById("fnametxt").value="";
+	document.getElementById("emailtxt").value="";
+	document.getElementById("pass1txt").value="";
+	document.getElementById("pass2txt").value="";
+	document.getElementById("phtxt").value="";
+	document.getElementById("pincodetxt").value="";
+	document.getElementById("male").checked=false;
+		document.getElementById("female").checked=false;
+		document.getElementById("SSLC").checked=false;
+		document.getElementById("Deree").checked=false;
+		document.getElementById("PG").checked=false;
+		document.getElementById("statetxt").value=1;
+
+}
+
+/*Method for handling submit action in signin.html */
+function signin_submit_action()
+{
+		var emailtxt = document.getElementById("emailtxt").value;
+		var passtxt = document.getElementById("passtxt").value;
+		if(emailtxt.trim()=="")
+			{alert("Enter the Email address");
+			document.getElementById("emailtxt").focus();
+			return false;
+			}
+		if(emailtxt!="")
+		{
+			var re = /\S+@\S+\.\S+/;
+    		if(!re.test(emailtxt)) 
+    		
+    			{alert("Enter a valid email id");
+    			document.getElementById("emailtxt").focus();
+    			return false;
+    			}
+    			
+
+		}
+		if(passtxt=="")
+			{alert("Enter the password ");
+			document.getElementById("passtxt").focus();
+			return false;
+		}
+
+}
+
+/*Method for handling reset action in signin.html */	
+function signin_reset_action()
+{
+	document.getElementById("emailtxt").value="";
+	document.getElementById("passtxt").value="";
+}
+function email_disp()
+{
+	document.getElementById("disp").innerHTML="Enter Email Id";
+}
+function pass_disp()
+{
+	document.getElementById("passdisp").innerHTML="Enter Password";
+}
 		
 
-		
-		
-		
-		
-
-	

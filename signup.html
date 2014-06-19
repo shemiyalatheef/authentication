@@ -19,41 +19,53 @@
 				<div class="signin">
 						<h4>Sign Up</h4>
 					</div>	
-					
+					<div class="disp" id="fnamedisp"></div>
 					<div class="signup_right">
-						<input type="text" id="fnametxt" placeholder="First Name">
-					</div>
-					
-					<div class="signup_right">
-						<input type="text" id="lnametxt" placeholder="Last Name">
-					</div>
-					
-					<div class="signup_right">
-						<input type="text" id="emailtxt" placeholder="Email">
+						<input type="text" id="fnametxt" placeholder="First Name" 
+						onclick="fnamedisp.innerHTML='First Name'">
 					</div>
 
-					
+					<div class="disp" id="lnamedisp"></div>
 					<div class="signup_right">
-						<input type="password" id="pass1txt" placeholder="New Password">
-					</div>
-					
-					<div class="signup_right">
-						<input type="password" id="pass2txt" placeholder="Confirm password">
+						<input type="text" id="lnametxt" placeholder="Last Name"
+						onclick="lnamedisp.innerHTML='Last Name'">
 					</div>
 
-					
+					<div class="disp" id="edisp"></div>
 					<div class="signup_right">
-						<input type="Text" id="phtxt" placeholder="Phone Number" onkeypress="return phone_validation()" >
+						<input type="text" id="emailtxt" placeholder="Email"
+						onclick="edisp.innerHTML='Email Id'">
 					</div>
 
-					
+					<div class="disp" id="pdisp"></div>
 					<div class="signup_right">
-						<input type="Text" id="pincodetxt" placeholder="Pincode">
+						<input type="password" id="pass1txt" placeholder="New Password"
+						onclick="pdisp.innerHTML='New Password'">
+					</div>
+					
+					<div class="disp" id="cpdisp"></div>
+					<div class="signup_right">
+						<input type="password" id="pass2txt" placeholder="Confirm password"
+						onclick="cpdisp.innerHTML='Confirm password'">
 					</div>
 
-					
+					<div class="disp" id="phdisp"></div>
 					<div class="signup_right">
-						<select id="statetxt">
+						<input type="Text" id="phtxt" placeholder="Phone Number" onkeypress="phone_validation()" 
+						onclick="phdisp.innerHTML='Phone Number'">
+					</div>
+
+					<div class="disp" id="pindisp"></div>
+					<div class="signup_right">
+						<input type="Text" id="pincodetxt" placeholder="Pincode"
+						onclick="pindisp.innerHTML='Pincode'"
+						onkeypress="return pin_validation()" >
+					</div>
+
+					<div class="disp" id="statedisp"></div>
+					<div class="signup_right">
+						<select id="statetxt" 
+						onclick="statedisp.innerHTML='Select State'">
 							<option value=1 >Select State</option>
 							<option value=2>Kerala</option>
 							<option value=3>Tamil Nadu</option>
@@ -65,27 +77,42 @@
 						Gender
 					</div>
 					<div class="signup_right">
-						<label for="male">Male</label>
-  						<input type="radio" name="sex" id="male" value="male">
-  						<label for="female">Female</label>
+						
+  						<input type="radio" name="sex" id="male" 
+  						value="male">
+  						<label for="male">Male</label>
+  						
   						<input type="radio" name="sex" id="female" value="female">
+  						<label for="female">Female</label>
 					</div>
 
 					<div class="signup_left" >
 						Language
 					</div>
 					<div class="signup_right">
-						<label for="SSLC">Malayalam</label>
-						<input type="checkbox"  id="SSLC">
 						
-						<label for="Deree">English</label>
+						<input type="checkbox"  id="SSLC">
+						<label for="SSLC">Malayalam</label>
+
+						
 						<input type="checkbox"  id="Deree">
-						<label for="PG">Hindi</label>
+						<label for="Deree">English</label>
+						
 						<input type="checkbox"  id="PG">
+						<label for="PG">Hindi</label>
 						
 					</div>
 					<div class="signup_right">
-					<div><input type="submit" value="submit" onclick="return submit_action()"></div>
+					<div>
+					<input type="submit" value="Sign Up" onclick="return signup_submit_action()"
+					style="background-color: #9621DE;
+					width:25%; height:30px;
+					color:black">
+					<input type="button" value="Reset" onclick=" signup_reset_action()" 
+					style="background-color: #9621DE;
+					width:25%; height:30px;
+					color:black">
+					</div>
 					</div>
 					
 			
